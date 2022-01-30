@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datetime superapp</title>
+    <script data-main="scripts/app" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <script src="./src/main.js" type="module"></script>
+    <style>
+        .unvisible {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="datecalc" class="unvisible">
+        <h3>Калькулятор дат</h3>
+        <label>
+            <strong>Первая дата:</strong>
+            <input type="date" name="firstDate" />
+        </label>
+        <label>
+            <strong>Вторая дата:</strong>
+            <input type="date" name="secondDate" />
+        </label>
+        <button type="submit">Расчитать промежуток</button>
+        <p id="datecalc__result"></p>
+        <button id="switch-on-timer">Переключиться на таймер</button>
+    </form>
+    <form id="timer">
+        <h3>Таймер</h3>
+        <label>
+            <strong>Таймер:</strong>
+            <input type="number" id="input-timer" min="0" max="9999" style="width: 45px;" value="0" />
+        </label>
+        <button id="start">Старт</button>
+        <button id="stop">Стоп</button>
+        <p id="timer__result"></p>
+        <button id="switch-on-date">Переключиться на калькулятор дат</button>
+    </form>
+</body>
+
+</html>
