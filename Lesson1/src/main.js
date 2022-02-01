@@ -37,12 +37,12 @@ start.onclick = (event) => {
     event.preventDefault();
     if (timerIsInWork) return;
     let timer = inputTimer.value;
-    console.log(timer);
     timerIsInWork = true;
     intervalId = setInterval(() => {
         if (timer <= 0) {
             clearInterval(intervalId);
             timerIsInWork = false;
+            getSound();            
         }    
         inputTimer.value = timer--;
     }, 1000);
