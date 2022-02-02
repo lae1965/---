@@ -42,9 +42,10 @@ start.onclick = (event) => {
         if (timer <= 0) {
             clearInterval(intervalId);
             timerIsInWork = false;
-            getSound();            
+            getSound('02599.mp3', 1000);            
         }    
         inputTimer.value = timer--;
+        getSound('tic.mp3', 500);
     }, 1000);
 }
 stop.onclick = (event) => {

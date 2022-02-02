@@ -1,6 +1,6 @@
-export const getSound = () => {
+export const getSound = (melody, playingTime) => {
     const sound = new Howl({
-        src: ['./src/02599.mp3'],
+        src: [`./src/${melody}`],
 
     });
       
@@ -8,6 +8,6 @@ export const getSound = () => {
     sound.play();
     setTimeout(() => {
       sound.stop();
-    }, 1000);
+    }, playingTime);
 }
   
