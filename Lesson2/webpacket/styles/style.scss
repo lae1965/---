@@ -1,0 +1,9 @@
+.unvisible {
+    display: none;
+}
+
+#input{
+    &-timer {
+        width: 45px;
+    }
+}
